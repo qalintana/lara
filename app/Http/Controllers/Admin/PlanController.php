@@ -13,11 +13,12 @@ class PlanController extends Controller
 
     public function __construct(Plan $plan)
     {
+
         $this->repository = $plan;
     }
     public function index()
     {
-        $plans = $this->repository->paginate(1);
+        $plans = $this->repository->latest()->paginate(1);
 
         return view('admin.pages.plans.index', ['plans' => $plans]);
     }

@@ -35,7 +35,7 @@
                 </table>
         </div>
 
-        <div class="card-footer">
+        <div class="card-footer d-flex justify-content-center">
             {!! $plans->links() !!}
         </div>
     </div>
